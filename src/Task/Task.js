@@ -1,11 +1,23 @@
 import React from "react";
 import moment from "moment";
 
-const Task = (props) => {
-    // props = { text: "Do the dishes", dueDate: "2020-03-10", completed: true, id: 2, deleteTaskFunc: fn() }
+const Task = props => {
+    /*  props = { 
+        text: "Do the dishes",
+        dueDate: "2020-03-10", 
+        completed: true, 
+        id: 2, 
+        deleteTaskFunc: fn(), 
+        markCompleteFunc: fn() 
+    }
+    */
 
-    const handleClick = () => {
-        props.deleteTaskFunc(props.id)
+    const handleDeleteClick = () => {
+        props.deleteTaskFunc(props.id);
+    };
+
+    const handleCompleteClick = () => {
+        props.markCompleteFunc(props.id);
     };
 
     return (
@@ -19,11 +31,12 @@ const Task = (props) => {
             </div>
 
             <div className="col-6 col-md-2">
-                {props.completed === false && <button className="btn btn-primary">Mark as complete</button>}
+                {props.completed === false && (
+                    <button className="btn btn-primary" onClick={handleCompleteClick}>Mark as complete</button>)}
             </div>
 
             <div className="col-6-md-2">
-                <button className="btn btn-danger" onClick={handleClick}>Delete</button>
+                <button className="btn btn-danger" onClick={handleDeleteClick}>Delete</button>
             </div>
 
         </div>

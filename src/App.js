@@ -6,9 +6,14 @@ import TaskCount from "./TaskCount/TaskCount";
 import Task from "./Task/Task";
 
 // Click on the delete button
-// Our application needs to know this happened! (Listen for the event) - DONE
-// Know which button was clicked? - DONE
-// Remove the relevant todo object from our state - DONE
+// Our application needs to know this happened! (Listen for the event) 
+// Know which button was clicked? 
+// Remove the relevant todo object from our state 
+
+// Click on the complete button
+// our application needs to know this happens
+// which button was clicked? (ID)
+// Updates the relevant task in our state (completed = true)
 
 //JSX
 function App() {
@@ -34,7 +39,7 @@ function App() {
     },
     {
       text: "Hoover the car",
-      completed: true,
+      completed: false,
       dueDate: "2020-04-05",
       id: 4
     }
@@ -51,6 +56,19 @@ function App() {
 
     // Update the state with the new (shorter) array
     setTasks(filteredTasks);
+  };
+
+  const markTaskComplete = (id) => {
+    // Create a new array of updated tasks, where the completed property of the matching task has been updated
+    const newTasks = tasks.map(task => {
+      if (task.id === id) {
+        task.completed = true;
+      }
+
+      return task;
+    });
+
+    setTasks(newTasks);
   }
 
 
@@ -67,8 +85,8 @@ function App() {
               <Task
                 // An internal prop used by React to keep track of which Task component is which 
                 key={task.id}
-
                 deleteTaskFunc={deleteTask}
+                markCompleteFunc={markTaskComplete}
                 text={task.text}
                 completed={task.completed}
                 dueDate={task.dueDate}
