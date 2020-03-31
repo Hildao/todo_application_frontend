@@ -7,6 +7,12 @@ body {
   background-size: cover;
   color: white;
   font-size: 18px;
+  justify-content: center;
+}
+
+.container {
+margin-left: 200px;
+margin-right: 100px;
 }
 
 h1 {
@@ -29,7 +35,7 @@ h1 {
   /*margin-left: 20px;*/
 }
 
-
+/*
 .addTask{
   align-items: center;
   width: 500px;
@@ -38,7 +44,7 @@ h1 {
   margin-bottom: 20px;
   margin-left: 322px;
   margin-right: 0px; 
-}
+}*/
 
 .btn {
   color: white;
