@@ -1,8 +1,13 @@
 import React from "react";
 import moment from "moment";
 
-function Task(props) {
-    // props = { text: "Do the dishes", dueDate: "2020-03-10", completed: true}
+const Task = (props) => {
+    // props = { text: "Do the dishes", dueDate: "2020-03-10", completed: true, id: 2, deleteTaskFunc: fn() }
+
+    const handleClick = () => {
+        props.deleteTaskFunc(props.id)
+    };
+
     return (
         <div className="row taskRow">
             <div className="col-12 col-md-4">
@@ -18,7 +23,7 @@ function Task(props) {
             </div>
 
             <div className="col-6-md-2">
-                <button className="btn btn-danger">Delete</button>
+                <button className="btn btn-danger" onClick={handleClick}>Delete</button>
             </div>
 
         </div>
