@@ -2,8 +2,8 @@ body {
   font-family: 'Roboto', sans-serif;
   height: 100%;
   width: 100%;
-  /*background-image: url(images/toDo_app-background.jpg);*/
-  background-color: purple;
+  /*background-image: url(image/toDo_app-background.jpg);*/
+ background-color: purple;
   background-size: cover;
   color: white;
   font-size: 18px;

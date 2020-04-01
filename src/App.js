@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import Header from "./Header/Header";
 import AddTask from "./AddTask/AddTask";
@@ -15,6 +16,13 @@ import Task from "./Task/Task";
 // which button was clicked? (ID)
 // Updates the relevant task in our state (completed = true)
 
+// Adding a new task
+// Ensure the AddTask component is controlled - so that it knows about what is being entered in the form
+// Click on the add button
+// Need to know that this happened 
+// What is the state of the form when this click happens? - DONE
+// Add the new task (constructed based on the data in the form) to the tasks list
+
 //JSX
 function App() {
   // If a value can be computed from one piece of state, no need to store it separately (count in this case)
@@ -23,25 +31,25 @@ function App() {
       text: "Clean the dishes",
       completed: true,
       dueDate: "2020-04-02",
-      id: 1
+      id: uuidv4()
     },
     {
       text: "Wash the dog",
       completed: false,
       dueDate: "2020-04-03",
-      id: 2
+      id: uuidv4()
     },
     {
       text: "Hoover the cupboard",
       completed: true,
       dueDate: "2020-04-04",
-      id: 3
+      id: uuidv4()
     },
     {
       text: "Hoover the car",
       completed: false,
       dueDate: "2020-04-05",
-      id: 4
+      id: uuidv4()
     }
   ])
 
@@ -71,13 +79,28 @@ function App() {
     setTasks(newTasks);
   }
 
+  const addTask = (text, date) => {
+    // Create a new task object based on the data passed as parameters
+    const newTask = {
+      text: text,
+      completed: false,
+      dueDate: date,
+      id: uuidv4() // TODO: UUID - use the UUID package from npm to generate a unique UUID 
+    }
+    // Create a new array of tasks which includes this new task
+    // AVOID mutating arrays or object (push, pop, shift, splice, sort)
+    const newTasks = [...tasks, newTask];
+
+    // use the setTasks function to update the state
+    setTasks(newTasks);
+  }
 
   return (
     <div className="App">
       <Header />
       <main>
         <div className="container">
-          <AddTask />
+          <AddTask addTaskFunc={addTask} />
           <TaskCount count={tasks.length} />
           {/* Passing a prop of text to each Task component */}
           {tasks.map((task) => {
