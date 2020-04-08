@@ -97,28 +97,30 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <main>
-        <div className="container">
-          <AddTask addTaskFunc={addTask} />
-          <TaskCount count={tasks.length} />
-          {/* Passing a prop of text to each Task component */}
-          {tasks.map((task) => {
-            return (
-              <Task
-                // An internal prop used by React to keep track of which Task component is which 
-                key={task.id}
-                deleteTaskFunc={deleteTask}
-                markCompleteFunc={markTaskComplete}
-                text={task.text}
-                completed={task.completed}
-                dueDate={task.dueDate}
-                id={task.id}
-              />
-            );
-          })}
-        </div>
-      </main>
+      <div className="background">
+        <Header />
+        <main>
+          <div className="container">
+            <AddTask addTaskFunc={addTask} />
+            <TaskCount count={tasks.length} />
+            {/* Passing a prop of text to each Task component */}
+            {tasks.map((task) => {
+              return (
+                <Task
+                  // An internal prop used by React to keep track of which Task component is which 
+                  key={task.id}
+                  deleteTaskFunc={deleteTask}
+                  markCompleteFunc={markTaskComplete}
+                  text={task.text}
+                  completed={task.completed}
+                  dueDate={task.dueDate}
+                  id={task.id}
+                />
+              );
+            })}
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

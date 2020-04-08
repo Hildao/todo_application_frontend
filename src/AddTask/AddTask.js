@@ -37,17 +37,17 @@ function AddTask(props) {
     // Make sure we can listen to any events that happen in the form, update state accordingly
     return (
         <div className="row addTask">
-            <div className="col-4">
+            <div className="col-md-4">
                 <input type="text" className="input-group" id="addTask" placeholder="Add new task" value={taskText} onChange={handleTextChange} />
             </div>
 
-            <div className="col-3">
+            <div className="col-md-4">
                 <input type="date" className="input-group" value={date} onChange={handleDateChange} />
             </div>
 
 
-            <div className="col-3">
-                <button className="btn btn-primary" onClick={handleAddTask}>Add</button>
+            <div className="col-md-4">
+                <button className="btn" onClick={handleAddTask}><i class="fas fa-plus-circle"></i></button>
             </div>
         </div>
     )

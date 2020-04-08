@@ -22,21 +22,21 @@ const Task = props => {
 
     return (
         <div className="row taskRow">
-            <div className="col-12 col-md-4">
+            <div className="col-md-6">
                 {props.text}
             </div>
 
-            <div className="col-6 col-md-2">
+            <div className="col-md-2">
                 {moment(props.dueDate).format('ddd Do MMMM YYYY')}
             </div>
 
-            <div className="col-6 col-md-2">
+            <div className="col-md-2">
                 {props.completed === false && (
-                    <button className="btn btn-primary" onClick={handleCompleteClick}>Mark as complete</button>)}
+                    <button className="btn" onClick={handleCompleteClick}><i class="fas fa-check-circle"></i></button>)}
             </div>
 
-            <div className="col-6-md-2">
-                <button className="btn btn-danger" onClick={handleDeleteClick}>Delete</button>
+            <div className="col-md-2">
+                <button className="btn" onClick={handleDeleteClick}><i class="fas fa-trash-alt"></i></button>
             </div>
 
         </div>
