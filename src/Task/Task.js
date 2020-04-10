@@ -23,11 +23,11 @@ const Task = props => {
     return (
         <div className="row taskRow">
             <div className="col-md-6">
-                {props.text}
+                <p className="task">{props.text}</p>
             </div>
 
             <div className="col-md-2">
-                {moment(props.dueDate).format('ddd Do MMMM YYYY')}
+                <p className="dueDate">{moment(props.dueDate).format('ddd Do MMMM YYYY')}</p>
             </div>
 
             <div className="col-md-2">

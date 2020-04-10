@@ -53,7 +53,7 @@ function App() {
     }
   ])
 
-  // A function to delete a task from arra, and update the state with the new, shorter array
+  // A function to delete a task from array, and update the state with the new, shorter array
   //Any function that updates state should live where the state lives
   const deleteTask = (id) => {
     // delete /remove the task with the id from the tasks array

@@ -26,14 +26,42 @@ h1 {
   margin-right: 50px;
 }
 
-.taskCount {
-  text-align: center;
-  margin-left: 50px;
-  margin-right: 50px;
+.input-group {
+  height: 50px;
+  border-radius: 10px;
+  color: plum;
 }
 
+.input-group:focus {
+  outline: none;
+}
+
+.input-group:focus::placeholder {
+  color: plum;
+}
+
+.taskCount {
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.taskCount:hover {
+  background-color: white;
+}
+  
 .taskRow {
   margin-bottom: 20px;
+}
+
+.task:hover {
+  background-color: white;
+}
+
+.dueDate:hover {
+  background-color: white;
 }
 
 .btn {
@@ -41,6 +69,7 @@ h1 {
   font-size: 30px;
   font-weight: bold;
 }
+
 
 /*Media Queries*/
 
