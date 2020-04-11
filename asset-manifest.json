@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.c0a94378.chunk.css",
-    "main.js": "/static/js/main.cc80f54b.chunk.js",
-    "main.js.map": "/static/js/main.cc80f54b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.baa1023b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.baa1023b.js.map",
-    "static/js/2.62d1744a.chunk.js": "/static/js/2.62d1744a.chunk.js",
-    "static/js/2.62d1744a.chunk.js.map": "/static/js/2.62d1744a.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.8a48ebdfc2804a33d12a768f8ecf4755.js": "/precache-manifest.8a48ebdfc2804a33d12a768f8ecf4755.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c0a94378.chunk.css.map": "/static/css/main.c0a94378.chunk.css.map",
-    "static/js/2.62d1744a.chunk.js.LICENSE.txt": "/static/js/2.62d1744a.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/toDo_app-background.a61f9877.jpg"
+    "main.css": "/todo_application_frontend/static/css/main.42924fcf.chunk.css",
+    "main.js": "/todo_application_frontend/static/js/main.cc80f54b.chunk.js",
+    "main.js.map": "/todo_application_frontend/static/js/main.cc80f54b.chunk.js.map",
+    "runtime-main.js": "/todo_application_frontend/static/js/runtime-main.7b2a5b4e.js",
+    "runtime-main.js.map": "/todo_application_frontend/static/js/runtime-main.7b2a5b4e.js.map",
+    "static/js/2.62d1744a.chunk.js": "/todo_application_frontend/static/js/2.62d1744a.chunk.js",
+    "static/js/2.62d1744a.chunk.js.map": "/todo_application_frontend/static/js/2.62d1744a.chunk.js.map",
+    "index.html": "/todo_application_frontend/index.html",
+    "precache-manifest.651deba1e0402fedaaa30c5c5705b90d.js": "/todo_application_frontend/precache-manifest.651deba1e0402fedaaa30c5c5705b90d.js",
+    "service-worker.js": "/todo_application_frontend/service-worker.js",
+    "static/css/main.42924fcf.chunk.css.map": "/todo_application_frontend/static/css/main.42924fcf.chunk.css.map",
+    "static/js/2.62d1744a.chunk.js.LICENSE.txt": "/todo_application_frontend/static/js/2.62d1744a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/todo_application_frontend/static/media/toDo_app-background.a61f9877.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.baa1023b.js",
+    "static/js/runtime-main.7b2a5b4e.js",
     "static/js/2.62d1744a.chunk.js",
-    "static/css/main.c0a94378.chunk.css",
+    "static/css/main.42924fcf.chunk.css",
     "static/js/main.cc80f54b.chunk.js"
   ]
 }
