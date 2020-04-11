@@ -1,4 +1,5 @@
 {
+  "homepage": "https://hildao.github.io/todo_application_frontend",
   "name": "todo_application_frontend",
   "version": "0.1.0",
   "private": true,
@@ -12,7 +13,6 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "uuid": "^7.0.3",
-    "homepage": "https://hildao.github.io/todo_application_frontend"
   },
   "scripts": {
     "start": "react-scripts start",
