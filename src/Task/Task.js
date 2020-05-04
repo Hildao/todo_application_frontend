@@ -31,12 +31,12 @@ const Task = props => {
             </div>
 
             <div className="col-md-2">
-                {props.completed === false && (
-                    <button className="btn" onClick={handleCompleteClick}><i class="fas fa-check-circle"></i></button>)}
+                {props.completed === 0 && (
+                    <button className="btn" onClick={handleCompleteClick}><i className="fas fa-check-circle"></i></button>)}
             </div>
 
             <div className="col-md-2">
-                <button className="btn" onClick={handleDeleteClick}><i class="fas fa-trash-alt"></i></button>
+                <button className="btn" onClick={handleDeleteClick}><i className="fas fa-trash-alt"></i></button>
             </div>
 
         </div>

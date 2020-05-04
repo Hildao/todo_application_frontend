@@ -47,7 +47,7 @@ function AddTask(props) {
 
 
             <div className="col-md-4">
-                <button className="btn" onClick={handleAddTask}><i class="fas fa-plus-circle"></i></button>
+                <button className="btn" onClick={handleAddTask}><i className="fas fa-plus-circle"></i></button>
             </div>
         </div>
     )
